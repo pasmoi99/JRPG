@@ -17,6 +17,7 @@ public class SelectionManager : MonoBehaviour
     public GameUI UI;
     public SelectionMode CurrentSelectionMode;
     public List<SelectionInstructions> SelectionInstructionsTexts;
+    private bool PlayerHaveClickedOnCharacter = false;
 
     public void Update()
     {
@@ -24,7 +25,26 @@ public class SelectionManager : MonoBehaviour
         {
             UI.UpdateUI(instructionText: GetSelectionInstructionsText(CurrentSelectionMode));
         }
-        if (CurrentSelectionMode != SelectionMode.EnemyTurn && Input.GetMouseButtonDown(0))
+        if ((CurrentSelectionMode != SelectionMode.EnemyTurn && ! PlayerHaveClickedOnCharacter ) || (CurrentSelectionMode != SelectionMode.EnemyTurn && _selectedCharacter.IsSelected==false )) 
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+            if (hit.collider != null)
+            {
+                if (!hit.collider.TryGetComponent<Character>(out var character)) return;
+                if (CurrentSelectionMode == SelectionMode.EnemyToAttack)
+                {
+                    if (_selectedCharacter.GetType() == typeof(Ally)) ((Ally)_selectedCharacter).Attack(character);
+                }
+                HoverCharacter(character);
+                if (hit.collider != _selectedCharacter.Collider)
+                {
+                    _selectedCharacter.Visual.material = DefaultMaterial;
+                }
+            }
+            
+        }
+        else if (CurrentSelectionMode != SelectionMode.EnemyTurn && Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
@@ -36,6 +56,7 @@ public class SelectionManager : MonoBehaviour
                     if (_selectedCharacter.GetType() == typeof(Ally)) ((Ally)_selectedCharacter).Attack(character);
                 }
                 SelectCharacter(character);
+                _selectedCharacter.IsSelected = true;
             }
         }
     }
@@ -59,8 +80,18 @@ public class SelectionManager : MonoBehaviour
         UI.UpdateUI(_selectedCharacter);
     }
 
+    private void HoverCharacter<T>(T chara) where T : Character
+    {
+        CurrentSelectionMode = SelectionMode.Default;
+        if (_selectedCharacter != null) _selectedCharacter.Visual.material = DefaultMaterial;
+        _selectedCharacter = chara;
+        _selectedCharacter.Visual.material = OutlineMaterial;
+        UI.UpdateUI(_selectedCharacter);
+    }
+
     public void SetAttackMode()
     {
+        
         if (_selectedCharacter == null || _selectedCharacter.GetType() == typeof(Enemy)) return;
         CurrentSelectionMode = SelectionMode.EnemyToAttack;
         UI.UpdateUI(instructionText: GetSelectionInstructionsText(CurrentSelectionMode));
@@ -70,5 +101,9 @@ public class SelectionManager : MonoBehaviour
     {
         if (_selectedCharacter == null) return;
         SceneManager.LoadScene(0);
+    }
+    public void SetPlayerHasClickedOnCharacter()
+    {
+        PlayerHaveClickedOnCharacter = true;
     }
 }

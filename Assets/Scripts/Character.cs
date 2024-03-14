@@ -13,7 +13,10 @@ public class Character : MonoBehaviour
     public int NormalAttackDamage = 10;
     public Color CanAttackColor = Color.white;
     public Color StandByColor = Color.grey;
+    public Collider2D Collider;
     private bool _hasAttackedThisTurnOrIsStuned = false;
+    public bool IsSelected = false;
+    
     public bool HasAttackedThisTurnOrIsStuned
     {
         get { return _hasAttackedThisTurnOrIsStuned; }
@@ -43,6 +46,8 @@ public class Character : MonoBehaviour
 
         if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: NormalAttackDamage);
         else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: NormalAttackDamage);
+
+
     }
     virtual internal void Hit(int damage)
     {
