@@ -257,7 +257,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: -0.0041213036, y: 0.026673198}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -268,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.1373229, y: 0.57682216}
   m_EdgeRadius: 0
 --- !u!114 &6226405614043559445
 MonoBehaviour:
@@ -288,3 +288,5 @@ MonoBehaviour:
   Visual: {fileID: 7653876479534562199}
   CharacterAnimator: {fileID: 9122667785458126137}
   NormalAttackDamage: 10
+  CanAttackColor: {r: 1, g: 1, b: 1, a: 1}
+  StandByColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
