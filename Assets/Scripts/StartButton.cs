@@ -9,4 +9,10 @@ public class StartButton : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit");
+    }
 }
