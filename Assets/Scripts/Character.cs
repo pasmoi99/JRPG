@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public int Life = 100;
     public Sprite SpritePortrait;
     public SpriteRenderer Visual;
+    public Color ColorHit = Color.red;
     public Animator CharacterAnimator;
     public int NormalAttackDamage = 10;
     public Color CanAttackColor = Color.white;
@@ -36,6 +37,8 @@ public class Character : MonoBehaviour
         print($"{name} is attacking {defender.name} of type {defender.GetType()}");
         CharacterAnimator.SetTrigger("attack");
 
+        print(this);
+        print(TurnManager.Instance);
         TurnManager.Instance.HasAttacked(this);
 
         if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: NormalAttackDamage);
