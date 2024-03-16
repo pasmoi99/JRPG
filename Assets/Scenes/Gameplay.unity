@@ -2057,7 +2057,7 @@ PrefabInstance:
     - target: {fileID: 4644275822770279352, guid: 849bad00bbcd1f2458154a441e302bd2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52b7d285b7929e349a84c985ccb2824a, type: 2}
+      objectReference: {fileID: 2100000, guid: 53c8ece3ab093ff44a530c8b3f30df75, type: 2}
     - target: {fileID: 8841873232076443971, guid: 849bad00bbcd1f2458154a441e302bd2, type: 3}
       propertyPath: m_Name
       value: Warrior
