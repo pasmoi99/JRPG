@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SliderValue1 : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI Text Value;
+    public TMPro.TextMeshProUGUI TextValue;
     public Slider Slider;
 
     public void OnValueChanged(float newValue)
@@ -16,7 +17,7 @@ public class SliderValue1 : MonoBehaviour
     }
     public void OnMusicValueChanged (float newValue)
     {
-        Music.volume = newValue;
+        //Music.volume = newValue;
     }
 
     public void OnSFXValueChanged(float newValue)
@@ -26,7 +27,7 @@ public class SliderValue1 : MonoBehaviour
 
         float volume = Mathf.Log10(newValue) * 20;
 
-        Mixer.SetFloat("SFX_Volume", volume);
+        //Mixer.SetFloat("SFX_Volume", volume);
     }
 
 }
