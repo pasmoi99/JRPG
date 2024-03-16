@@ -286,7 +286,10 @@ MonoBehaviour:
   Life: 100
   SpritePortrait: {fileID: 21300000, guid: d19396053dd300648b96eef7e6ce89c4, type: 3}
   Visual: {fileID: 7004785079986931733}
+  ColorHit: {r: 1, g: 0, b: 0, a: 1}
   CharacterAnimator: {fileID: 3513560173749589483}
   NormalAttackDamage: 10
   CanAttackColor: {r: 1, g: 1, b: 1, a: 1}
   StandByColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Collider: {fileID: 6514562956264513586}
+  IsSelected: 0

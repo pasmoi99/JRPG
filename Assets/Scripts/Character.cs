@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     public Color StandByColor = Color.grey;
     public Collider2D Collider;
     private bool _hasAttackedThisTurnOrIsStuned = false;
-    public bool IsSelected = false;
+    //public bool IsSelected = false;
     
     public bool HasAttackedThisTurnOrIsStuned
     {
