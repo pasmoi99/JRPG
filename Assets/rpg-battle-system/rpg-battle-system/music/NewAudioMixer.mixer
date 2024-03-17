@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+--- !u!243 &-600639074931697925
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: c3abb36759d304c499b135fe42d26b5f
+  m_Children: []
+  m_Volume: 7500cb51a120e2a4fb057f5fe52d2ca9
+  m_Pitch: c59b00862d82e5c4e9ec0ec9f0f952b8
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 6116707258398084193}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+=======
+>>>>>>> Stashed changes
 --- !u!244 &-3997723808446548327
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -14,6 +38,10 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+<<<<<<< Updated upstream
+=======
+>>>>>>> f20386300a77bce847fd139cb7e33c6b25d28e34
+>>>>>>> Stashed changes
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -29,11 +57,27 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  m_ExposedParameters:
+  - guid: 7500cb51a120e2a4fb057f5fe52d2ca9
+    name: SFX_Volume
+  m_AudioMixerGroupViews:
+  - guids:
+    - 2bb03eec681d81948b5402fc8c02fe41
+    - c3abb36759d304c499b135fe42d26b5f
+=======
+>>>>>>> Stashed changes
   m_ExposedParameters: []
   m_AudioMixerGroupViews:
   - guids:
     - 6db6f7962a99f3c4699de8f74e816ad8
     - 1fd8def72e8009f4aae16257618ebe2c
+<<<<<<< Updated upstream
+=======
+>>>>>>> f20386300a77bce847fd139cb7e33c6b25d28e34
+>>>>>>> Stashed changes
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -45,11 +89,25 @@ AudioMixerGroupController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  m_GroupID: 2bb03eec681d81948b5402fc8c02fe41
+  m_Children:
+  - {fileID: -600639074931697925}
+  m_Volume: aaf8a458932a89e468e9b14554db3afa
+  m_Pitch: ba4a445a5eea2ba4b8955c4a6a51a2d0
+=======
+>>>>>>> Stashed changes
   m_GroupID: 6db6f7962a99f3c4699de8f74e816ad8
   m_Children:
   - {fileID: 3067912588314492832}
   m_Volume: 249a21191cbc78644aca9db29f8fb86e
   m_Pitch: ab6d43b2dbddb5d4fbf235c2cfc6369c
+<<<<<<< Updated upstream
+=======
+>>>>>>> f20386300a77bce847fd139cb7e33c6b25d28e34
+>>>>>>> Stashed changes
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
@@ -64,9 +122,21 @@ AudioMixerEffectController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
+<<<<<<< Updated upstream
   m_EffectID: 3af8bab4e3f8a714d9b0c79a6623ffbf
   m_EffectName: Attenuation
   m_MixLevel: e76ce403f66c68f43b6dbe01f7187337
+=======
+<<<<<<< HEAD
+  m_EffectID: 4fac944914050e843a80f1cc336cdada
+  m_EffectName: Attenuation
+  m_MixLevel: 0680fdc5982a72748814d0a2b89c6b12
+=======
+  m_EffectID: 3af8bab4e3f8a714d9b0c79a6623ffbf
+  m_EffectName: Attenuation
+  m_MixLevel: e76ce403f66c68f43b6dbe01f7187337
+>>>>>>> f20386300a77bce847fd139cb7e33c6b25d28e34
+>>>>>>> Stashed changes
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -79,6 +149,29 @@ AudioMixerSnapshotController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  m_SnapshotID: b30df18356461f340a38715a4778d54e
+  m_FloatValues:
+    7500cb51a120e2a4fb057f5fe52d2ca9: -5.8
+  m_TransitionOverrides: {}
+--- !u!244 &6116707258398084193
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3050197594e94d840863c5dfe6f9a51b
+  m_EffectName: Attenuation
+  m_MixLevel: 72180aeba2e335f4084360cb79590547
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+=======
+>>>>>>> Stashed changes
   m_SnapshotID: 32cf78bf4177e284fb824a36459e8367
   m_FloatValues:
     249a21191cbc78644aca9db29f8fb86e: 0
@@ -102,3 +195,7 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+<<<<<<< Updated upstream
+=======
+>>>>>>> f20386300a77bce847fd139cb7e33c6b25d28e34
+>>>>>>> Stashed changes
