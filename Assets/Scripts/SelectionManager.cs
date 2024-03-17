@@ -56,10 +56,13 @@ public class SelectionManager : MonoBehaviour
         }
         if (_selectedCharacter != null && CurrentSelectionMode == SelectionMode.ChacterSelected)
         {
-            if (!hit.collider.TryGetComponent<Character>(out var character)) return;
-            if (Input.GetMouseButtonDown(0) && hit.collider == character.Collider)
+            if (hit.collider != null)
             {
-                SelectCharacter(character);
+                if (!hit.collider.TryGetComponent<Character>(out var character)) return;
+                if (Input.GetMouseButtonDown(0) && hit.collider == character.Collider)
+                {
+                    SelectCharacter(character);
+                }
             }
         }
         //else if (CurrentSelectionMode != SelectionMode.EnemyTurn && Input.GetMouseButtonDown(0))
