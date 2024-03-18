@@ -5,8 +5,7 @@ using UnityEngine.Ui;
 public class VoulmeSettings : MonoBehaviour
 {
     [SerializeField] private AudioMixer myMixer;
-    [SerializeField] private Slider musicSlider;
-    [SerializeField] private Slider SFXSlider;
+    [SerializeField] private Slider musicSlider
 
     public void SeMusicVolume()
     {
