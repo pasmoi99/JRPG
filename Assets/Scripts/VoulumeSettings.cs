@@ -1,18 +1,16 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Ui;
+using UnityEngine.UI; 
 
-public class VoulmeSettings : MonoBehaviour
+public class VolumeSettings : MonoBehaviour 
 {
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
 
-    public void SeMusicVolume()
+    public void SetMusicVolume() 
     {
         float volume = musicSlider.value;
-        myMixer.SetFloat("music", Mathf.Log10(volume)*20);
-
+        myMixer.SetFloat("music", Mathf.Log10(volume) * 20);
     }
 }
- 
