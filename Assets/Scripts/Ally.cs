@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Ally : Character
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectsWithTag("Audio").GetComponent<AudioManager>();
+    }
     internal override void Attack(Character defender)
     {
         if (HasAttackedThisTurnOrIsStuned) return;
@@ -22,6 +27,7 @@ public class Ally : Character
         base.Hit(damage);
         CharacterAnimator.SetTrigger("hit");
         Life = Mathf.Clamp(Life - damage, 0, LifeMax);
+        audioManager.PlaySFX(audioManager.Attack)
         StartCoroutine(ChangeToHitColor(5));
     }
     private IEnumerator ChangeToHitColor(float timerLimit)
