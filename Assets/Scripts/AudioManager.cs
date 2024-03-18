@@ -7,16 +7,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource; 
 
     [Header("         Audio Clip         ")]
-    public AudioClip Background;
     public AudioClip Death;
     public AudioClip Attack;
     public AudioClip Hit;
 
-    private void Start()
-    {
-        musicSource.clip = Background;
-        musicSource.Play();
-    }
+   
 
     public void PlaySFX(AudioClip clip)
     {
