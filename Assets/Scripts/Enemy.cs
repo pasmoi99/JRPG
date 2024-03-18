@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponentInChildren<AudioManager>();
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager not found!");
+        }
+    }
+
     internal override void Attack(Character defender)
     {
         if (HasAttackedThisTurnOrIsStuned) return;
@@ -12,6 +22,7 @@ public class Enemy : Character
 
     internal override void Hit(int damage)
     {
+
         base.Hit(damage);
         CharacterAnimator.SetTrigger("hit");
         Life = Mathf.Clamp(Life - damage, 0, LifeMax);
