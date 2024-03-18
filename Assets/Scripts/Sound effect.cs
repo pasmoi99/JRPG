@@ -5,5 +5,5 @@ using UnityEngine;
 public class Soundeffect : MonoBehaviour
 {
     public AudioSource src;
-    public AudioClip sfx1, sfx
+    public AudioClip sfx1, sfx;
 }

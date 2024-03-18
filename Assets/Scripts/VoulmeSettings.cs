@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Ui;
 
-public class VoulmeSettings : MonoBehaviour
+public class VoulmeSets: MonoBehaviour
 {
     [SerializeField] private AudioMixer myMixer;
-    [SerializeField] private Slider musicSlider
+    [SerializeField] private Slider musicSlider;
 
     public void SeMusicVolume()
     {
